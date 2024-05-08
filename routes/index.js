@@ -19,6 +19,7 @@ module.exports = function () {
 
     // Endpoint para recibir la información de la API de PostgreSQL y guardarla en MongoDB
     router.post('/pagos', postgreController.registrarPago);
+    router.put('/pagos/:correlativo',postgreController.actualizarPago);
 
     return router;
 }
